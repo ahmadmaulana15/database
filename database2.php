@@ -12,7 +12,7 @@ class Database
     {
         $this->koneksi = mysqli_connect($this->host, $this->user, $this->pass, $this->db);
         if ($this->koneksi) {
-           // echo"berhasil";
+           // echo "berhasil";
         } else {
             return "Koneksi databse gagal";
         }
@@ -24,13 +24,13 @@ class Biodata extends Database
     public function index()
     {
         $databio = mysqli_query($this->koneksi, "select * from biodata");
-        //var_dump($datasiswa);
+        //var_dump($databio);
         return $databio;
     }
     //menambah data
-    public function create($nama, $alamat, $tgl_lahir, $jenis_kelamin, $agama)
+    public function create($nama, $alamat, $tgl_lahir, $jenis_kelamin, $agama, $umur)
     {
-        mysqli_query($this->koneksi, "insert into biodata values('',$nama','$alamat','$tgl_lahir','$jenis_kelamin','$agama')");
+        mysqli_query($this->koneksi, "INSERT INTO biodata VALUES('','$nama','$alamat','$tgl_lahir','$jenis_kelamin','$agama','$umur')");
     }
     // menampilkan data berdasarka ID
     public function show($id)
@@ -45,9 +45,9 @@ class Biodata extends Database
         return $databio;
     }
     //mengupdate data berdasarkan id
-    public function update($id, $nama, $alamat, $tgl_lahir, $jenis_kelamin, $agama)
+    public function update($id, $nama, $alamat, $tgl_lahir, $jenis_kelamin, $agama, $umur)
     {
-        mysqli_query($this->koneksi, "update biodata set nama='$nama',alamat='$alamat',tgl_lahir='$tgl_lahir',jenis_kelamin='$jenis_kelamin',agama='$agama',id='$id'");
+        mysqli_query($this->koneksi, "update biodata set nama='$nama',alamat='$alamat',tgl_lahir='$tgl_lahir',jenis_kelamin='$jenis_kelamin',agama='$agama',umur='$umur' where id='$id'");
     }
     //menghapus data berdasarkan id
     public function delete($id)

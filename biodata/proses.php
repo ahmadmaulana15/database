@@ -10,13 +10,13 @@ if (isset($_POST['simpan'])) {
     $tgl_lahir = $_POST['tgl_lahir'];
     $jenis_kelamin = $_POST['jenis_kelamin'];
     $agama = $_POST['agama'];
-    $umur = date(Y) - $tgl_lahir;
+    $umur = date('Y') - $tgl_lahir;
 }
 if ($aksi == "tambah") {
-    $bio->create($nama, $alamat, $tgl_lahir, $jenis_kelamin, $agama);
+    $bio->create($nama, $alamat, $tgl_lahir, $jenis_kelamin, $agama, $umur);
     header("location:index.php");
 } elseif ($aksi == "update") {
-    $bio->update($id, $nama, $alamat, $tgl_lahir, $jenis_kelamin, $agama);
+    $bio->update($id, $nama, $alamat, $tgl_lahir, $jenis_kelamin, $agama, $umur);
     header("location:index.php");
 } elseif ($aksi == "delete") {
     $bio->delete($_GET['id']);

@@ -29,49 +29,48 @@
     <!--content-->
 
 
-<div class="container">
-  <div class="row" style="padding:20px;">
-  <div class="col-md-12">
-  <div class="card">
-  <center><div class="card-header"><h2>Store</h2></div></center>
-  <div class="card-body">
-         <!--isi disini-->
-         <form action="proses.php?aksi=tambah" method="post">
-         <div class="form-group">
-         <label>Nama :</label>
-         <input type="text" name="nama" class="form-control" required></input><br>
-         </div>
-         <div class="form-group">
-         <label>Alamat :</label>
-         <textarea name="alamat" class="form-control" rows="5"></textarea>         
-         </div>
-         <div class="form-group">
-         <label>Tanggal Lahir :</label>
-         <input type="date" name="tgl_lahir" class="form-control" required></input><br>
-         </div>
-         <div class="form-group">
-         <label for="">Jenis Kelamin :</label><br>
-         <input type="radio" name="jenis_kelamin" value="Laki-laki">Laki-laki<br>
-           <input type="radio" name="jenis_kelamin" value="Perempuan"> Perempuan<br>
-        </div>
-        <label>Agama</label>
-        <div class="form-group">
-        <select name="agama" class="form-control">
-         <option value="">pilih</option>
-         <option value="Islam">Islam</option>
-         <option value="Kristen">Kristen</option>
-         <option value="Hindu">Hindu</option>
-         <option value="Budha">Budha</option>
-         </select> <br></<select>
-        </div>
-         <div class="form-group">
-         <button type="submit" name="simpan" class="btn btn-primary">Simpan
-         </button>
-         <button type="reset" class="btn btn-warning">Reset</button>
-         </div>
-        
-    
- </form>
+  <div class="container">
+    <div class="row" style="padding:20px;">
+    <div class="col-md-12">
+    <div class="card">
+    <center><div class="card-header"><h2>Formulir</h2></div></center>
+    <div class="card-body">
+          <!--isi disini-->
+          <form action="proses.php?aksi=tambah" method="post">
+          <div class="form-group">
+          <label>Nama :</label>
+          <input type="text" name="nama" class="form-control" required></input><br>
+          </div>
+          <div class="form-group">
+          <label>Alamat :</label>
+          <textarea name="alamat" class="form-control" rows="5"></textarea>         
+          </div>
+          <div class="form-group">
+          <label>Tanggal Lahir :</label>
+          <input type="date" name="tgl_lahir" class="form-control" required></input><br>
+          </div>
+          <div class="form-group">
+          <label for="">Jenis Kelamin :</label><br>
+          <input type="radio" name="jenis_kelamin" value="Laki-laki">Laki-laki<br>
+            <input type="radio" name="jenis_kelamin" value="Perempuan"> Perempuan<br>
+          </div>
+          <label>Agama</label>
+          <div class="form-group">
+          <select name="agama" class="form-control">
+          <option value="">pilih</option>
+          <option value="Islam">Islam</option>
+          <option value="Kristen">Kristen</option>
+          <option value="Hindu">Hindu</option>
+          <option value="Budha">Budha</option>
+          </select> <br></<select>
+          </div>
+          <div class="form-group">
+          <button type="submit" name="simpan" class="btn btn-primary">Simpan</button>
+          <button type="reset" class="btn btn-warning">Reset</button>
+          </div>
+          
+      
+  </form>
  
  <!--js-->
 <script src="/assets/js/jquery.min.js"></script>

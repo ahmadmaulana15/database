@@ -1,5 +1,5 @@
 <?php
-include '../database.php';
+include '../database2.php';
 $siswa = new Siswa();
 ?>
 <!DOCTYPE html>
@@ -14,7 +14,6 @@ $siswa = new Siswa();
     <?php
     foreach ($siswa->edit($_GET['id']) as $data) {
         $id = $data['id'];
-        $nis = $data['nis'];
         $nama = $data['nama'];
         $alamat = $data['alamat'];
     }
@@ -24,10 +23,6 @@ $siswa = new Siswa();
         <form action="proses.php?aksi=update" method="post">
             <input type="hidden" name="id" value="<?php echo $id; ?>">
             <table>
-                <tr>
-                    <th>Nomor Induk Siswa</th>
-                    <td><input type="text" name="nis" value="<?php echo $nis; ?>" required> </td>
-                </tr>
                 <tr>
                     <th>Nama siswa</th>
                     <td><input type="text" name="nama" value="<?php echo $nama; ?>"required </td>
